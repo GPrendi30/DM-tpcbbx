@@ -21,7 +21,7 @@ object RunTPCBBXQuery {
                          // master url
                          masterUrl: String = "local[4]",
                          // List of queries to be run
-                         queryList: List[Int] = List(11),
+                         queryList: List[Int] = List(11, 12),
                          // show or hide result
                          showRes: Int = 0,
                          // enables debug printing
@@ -50,7 +50,7 @@ object RunTPCBBXQuery {
     var absInPathToData = "/abs/path/to/ptxtFiles"
     var absOutPathForResults = "abs/path/to/store/resultFiles"
     var masterUrl = "provide a master url, e.g. local[4]"
-    var queryList = List(11)
+    var queryList = List(11, 12)
     var showRes = 0
     args.sliding(2, 2).toList.collect {
       case Array("--absInPath", pathToData: String) => {
@@ -64,7 +64,7 @@ object RunTPCBBXQuery {
       }
       case Array("--qList", qList: String) => {
         if (qList.toLowerCase() == "all") {
-          queryList = List(11)
+          queryList = List(11, 12)
         }
         else {
           queryList = qList.split(",").map(_.toInt).toList
