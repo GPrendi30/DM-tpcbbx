@@ -1,0 +1,29 @@
+# Eclipse
+.eclipse/
+.cproject/
+.settings/
+
+# IntelliJ
+.idea/
+*.iml
+.bsp/
+
+# maven/SBT
+target/
+
+# cmake
+**/CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+Makefile
+
+# make
+*.so
+*.o
+
+# Visual Studio Code
+.bloop/
+.metals/
+.vscode/
+*.code-workspace
+
