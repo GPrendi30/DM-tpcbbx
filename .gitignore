@@ -27,3 +27,7 @@ Makefile
 .vscode/
 *.code-workspace
 
+output
+data
+ptxt
+
